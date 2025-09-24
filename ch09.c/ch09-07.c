@@ -1,0 +1,28 @@
+// 학번: 202511828	
+// 이름: 최주영
+// 프로그램 명: 예제 9-6
+// 날짜: 2025.09.24
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>	
+
+int main(void)
+{
+	char filename[] = "readme.txt";
+	char* p = NULL;
+
+	p = strchr(filename, '.');
+	if (p != NULL)
+	{
+		printf("file extension: %s\n", p + 1);
+	}
+
+	p = strchr(filename, 'txt');
+	if (p != NULL)
+	{
+		printf("file type: TEXT file\n");
+	}
+
+	return 0;
+}
