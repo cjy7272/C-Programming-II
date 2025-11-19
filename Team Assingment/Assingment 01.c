@@ -89,6 +89,7 @@ void assingment_31(int money)
 		else
 		{
 			printf("금액이 부족합니다. \n");
+			assingment_change(money);
 		}
 	}
 	else if (select == 2)
@@ -101,6 +102,7 @@ void assingment_31(int money)
 		else
 		{
 			printf("금액이 부족합니다. \n");
+			assingment_change(money);
 		}
 	}
 	else if (select == 3)
@@ -113,11 +115,13 @@ void assingment_31(int money)
 		else
 		{
 			printf("금액이 부족합니다. \n");
+			assingment_change(money);
 		}
 	}
 	else if (select == 4)
 	{
 		printf("취소되었습니다.");
+
 		return 0;
 	}
 }
