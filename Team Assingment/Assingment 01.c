@@ -75,54 +75,55 @@ void assingment_31(int money)
 	printf("현재 금액: %d\n", money);
 
 	printf("\n");
+	
+	while (1)
+	{
 
-	printf("번호를 선택하고 Enter: ");
-	scanf("%d", &select);
+		printf("번호를 선택하고 Enter: ");
+		scanf("%d", &select);
 
-	if (select == 1)
-	{
-		if (sell_coffee == 1)
+		if (select == 1)
 		{
-			printf("커피를 받으세요. \n");
-			assingment_change(money - 300);
+			if (sell_coffee == 1)
+			{
+				printf("커피를 받으세요. \n");
+				assingment_change(money - 300);
+			}
+			else
+			{
+				printf("금액이 부족합니다. \n");
+			}
 		}
-		else
+		else if (select == 2)
 		{
-			printf("금액이 부족합니다. \n");
-			assingment_change(money);
+			if (sell_cola == 1)
+			{
+				printf("주스를 받으세요. \n");
+				assingment_change(money - 480);
+			}
+			else
+			{
+				printf("금액이 부족합니다. \n");
+			}
 		}
-	}
-	else if (select == 2)
-	{
-		if (sell_cola == 1)
+		else if (select == 3)
 		{
-			printf("주스를 받으세요. \n");
-			assingment_change(money - 480);
+			if (sell_juice == 1)
+			{
+				printf("주스를 받으세요. \n");
+				assingment_change(money - 600);
+			}
+			else
+			{
+				printf("금액이 부족합니다. \n");
+			}
 		}
-		else
+		else if (select == 4)
 		{
-			printf("금액이 부족합니다. \n");
-			assingment_change(money);
-		}
-	}
-	else if (select == 3)
-	{
-		if (sell_juice == 1)
-		{
-			printf("주스를 받으세요. \n");
-			assingment_change(money - 600);
-		}
-		else
-		{
-			printf("금액이 부족합니다. \n");
-			assingment_change(money);
-		}
-	}
-	else if (select == 4)
-	{
-		printf("취소되었습니다.");
+			printf("취소되었습니다.");
 
-		return 0;
+			return 0;
+		}
 	}
 }
 
